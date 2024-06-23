@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" parallel="methods" thread-count="4" preserve-order="true" name="D:/RestTest/src/test/java/com/tests/APITests.java">
+        <classes>
+            <class name="com.tests.APITests">
+                <methods>
+                    <include name="getTest"/>
+                    <include name="postTest1"/>
+                    <include name="postTestFromExternalFile"/>
+                    <include name="postTestFromExtAndReplacing"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
