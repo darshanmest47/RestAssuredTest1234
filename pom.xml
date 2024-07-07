@@ -44,6 +44,14 @@
       <version>5.4.0</version>
     </dependency>
 
+    <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+    <dependency>
+      <groupId>com.aventstack</groupId>
+      <artifactId>extentreports</artifactId>
+      <version>5.0.0</version>
+    </dependency>
+
+
     <!-- https://mvnrepository.com/artifact/org.assertj/assertj-core -->
     <dependency>
       <groupId>org.assertj</groupId>
@@ -74,7 +82,6 @@
       <groupId>org.testng</groupId>
       <artifactId>testng</artifactId>
       <version>7.1.0</version>
-      <scope>test</scope>
     </dependency>
 
 
