@@ -12,6 +12,8 @@
                     <include name="postTest1"/>
                     <include name="postTestFromExternalFile"/>
                     <include name="postTestFromExtAndReplacing"/>
+                    <include name="testUsingExternalBuilder"/>
+                    <include name="testUsingStaticInnerClass"/>
                 </methods>
             </class>
         </classes>
