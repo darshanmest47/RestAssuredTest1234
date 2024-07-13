@@ -31,7 +31,24 @@ public final class ExtentReports {
         exttest.skip(MarkupHelper.createLabel(result, ExtentColor.YELLOW));
     }
 
-    public static void flushReports(){
+    public static void flushReports() {
         ExtentReporterUtility.tearDown();
+    }
+
+    public static void logger(String message) {
+        exttest.info(MarkupHelper.createCodeBlock(message, CodeLanguage.JSON));
+    }
+
+    public static void authors(String[] authors) {
+        for (String author : authors) {
+            exttest.assignAuthor(author);
+        }
+
+    }
+
+    public static void categories(String[] categories) {
+        for (String category : categories) {
+            exttest.assignCategory(category);
+        }
     }
 }

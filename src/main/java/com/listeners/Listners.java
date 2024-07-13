@@ -1,5 +1,6 @@
 package com.listeners;
 
+import com.frameworkanntations.FrameWorkAnnotations;
 import com.reports.ExtentReports;
 import org.testng.*;
 
@@ -12,8 +13,17 @@ public class Listners implements ITestListener, ISuiteListener {
 
     @Override
     public void onTestStart(ITestResult result) {
-        String method = result.getMethod().getConstructorOrMethod().getMethod().toString();
-        ExtentReports.createTest(method);
+        /* The following can be used to pass the methodname is extentreports*/
+        //String method = result.getMethod().getConstructorOrMethod().getMethod().toString();
+
+        /* The following can be used to pass the test description in extentreports */
+        String methodDescription = result.getMethod().getDescription().toString();
+        ExtentReports.createTest(methodDescription);
+        String authors[] = result.getMethod().getConstructorOrMethod().getMethod().getAnnotation(FrameWorkAnnotations.class).authors();
+        String categories[] = result.getMethod().getConstructorOrMethod().getMethod().getAnnotation(FrameWorkAnnotations.class).catgeories();
+        ExtentReports.authors(authors);
+        ExtentReports.categories(categories);
+
     }
 
     @Override
